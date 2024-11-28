@@ -1,0 +1,493 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+font-size: 16px;
+background-color: #020100;
+font-family: var(--FuentePrincipal);
+  }
+  :root {
+--blanco: #ffffff;
+--negro: #000000;   
+--FuentePrincipal: "Quicksand", sans-serif;
+
+}
+.logo{
+    height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+color: white;
+margin-bottom: 0px;
+margin-top: 0px;
+font-family: "Lacquer", system-ui;
+ font-weight: 400;
+ font-style: normal;
+}
+.headert
+{
+text-transform: uppercase;
+font-family: "Bangers", system-ui;
+font-weight: 400;
+font-style: normal;
+font-size: 50px;
+color: #dfe9f3;
+
+}
+
+h1{
+    font-family: var(--FuentePrincipal);
+    font-size: 3.8rem;
+    color: white;
+}
+
+h2 {
+
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+.black {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+h1,h2,h3 {
+    text-align: center;
+    color: white;
+}
+p{
+    color: white;
+}
+
+ 
+nav{
+    background-color: rgb(54, 124, 26);
+    display: flex;
+    justify-content: space-evenly; /*permite distribuir de forma proporcional los elementos dentro de la barra*/
+padding: 1 rem;
+}
+
+a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a:hover {
+    background-color:black;
+color:#0d5f14;
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    background-position: center center ;  
+}
+.imagen {
+    background-image: url("https://i.pinimg.com/originals/a5/73/29/a573297a12dff3ecf163a213ab132474.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80rem;
+    position: relative;
+    background-position: center center ;
+    }
+    
+    .contenido-imagen {
+        background-color: rgba(14, 73, 2, 0.8);
+    width: 100%;
+    height: 100%;
+position: absolute;   
+display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: center;
+}
+
+.gym {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+    text-align: center;
+    
+}
+
+.contenido-imagen h2, .contenido-imagen p 
+{
+    color:  var(--blanco);
+}
+
+.boton {
+
+    background-color: rgb(53, 129, 22);
+    text-transform: uppercase;
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 0.8rem;
+}
+
+.contenedor  {
+max-width: 80rem;
+margin: 0 auto;
+}
+
+
+@media (min-width: 768px)
+{
+    .servicios
+    {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+    }
+}
+
+.servicio
+{
+    display: flex;/*alinea iconos y titulos*/
+    flex-direction: column;
+    align-items: center; /*alinea todo los elemnetos*/
+}
+
+.servicio p {
+line-height: 2;
+text-align: center;
+color: white;
+}
+
+.servicio h3 {
+
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.iconos {
+
+    height: 15rem;
+    width: 15rem;
+    background-color: none;
+    border-radius: 10rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+form
+{
+background-color: rgb(37, 124, 26);
+width: min(50rem, 90%);
+margin: 0 auto;
+border-radius:1rem; 
+}
+
+fieldset 
+{
+  border:none;
+  background-color: rgb(37, 124, 26);
+}
+.botoon {
+    background-color: rgb(37, 124, 26);
+    text-transform: uppercase;
+    padding: 1rem 5rem 1rem 5rem;
+    border-radius: 0.8rem;
+    ;
+
+}
+
+legend
+{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--secundario);
+    font-weight: 700;
+    padding-top: 2rem;
+}
+
+label 
+{
+    color: var(--blanco);
+    font-weight: bold;
+    margin: 1rem;
+    display: block;
+}
+
+.input-text
+
+{
+border: none;
+padding: 1.5rem;
+width: 100%;
+border-radius: .5rem;
+
+}
+
+textarea
+{
+    height: 15rem;
+    resize: none;
+}
+
+.video {
+    width: 640;
+    height: 480;
+    
+}
+
+footer {
+    text-align: center;
+    background-color:  rgb(37, 124, 26);
+    font-family: "Caveat", cursive;
+    width: 100%;
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* pricig*/
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pricing .plan {
+  background-color: #fff;
+  padding: 2.5rem;
+  margin: 12px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.pricing .plan h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.pricing .plan .price {
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+.pricing .plan ul.features {
+  list-style-type: none;
+  text-align: left;
+}
+.pricing .plan ul.features li {
+  margin: 8px;
+}
+.pricing .plan ul.features li .fas {
+  margin-right: 4px;
+}
+.pricing .plan ul.features li .fa-check-circle {
+  color: #6ab04c;
+}
+.pricing .plan ul.features li .fa-times-circle {
+  color: #eb4d4b;
+}
+.pricing .plan button {
+  border: none;
+  width: 100%;
+  padding: 12px 35px;
+  margin-top: 1rem;
+  background-color: #6ab04c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.pricing .plan.popular {
+  border: 2px solid #6ab04c;
+  position: relative;
+  transform: scale(1.08);
+}
+.pricing .plan.popular span {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6ab04c;
+  color: #fff;
+  padding: 4px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.pricing .plan:hover {
+  box-shadow: 5px 7px 67px -28px rgba(0, 0, 0, 0.37);
+}
+
+/*tabla horario*/
+.promo {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #ffffff; /* Fondo blanco para la tabla */
+    border: 2px solid #2da700; /* Borde verde */
+}
+
+thead {
+    background-color: #000000; /* Fondo verde para el encabezado */
+}
+
+th {
+    padding: 15px;
+    color: white; /* Texto blanco */
+    font-size: 1.6rem;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dfe9f3; /* Línea entre filas */
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #757575; /* Color gris para el texto */
+}
+
+tbody tr:hover {
+    background-color: #dfe9f3; /* Color de fondo al pasar el mouse */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fondo gris claro para filas pares */
+}
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.cta-button:hover {
+    background-color: #e68900;
+}
+
+/*entrenadores*/
+.containero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+}
+
+.containero > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #018f19;
+    position: relative;
+    overflow: hidden;
+}
+
+.containero > div:nth-of-type(1) {
+    background: url("https://footballwhispers.com/wp-content/uploads/2023/04/Icon_71710939-scaled.jpg") 
+      no-repeat 50% / cover;
+}
+
+.containero > div:nth-of-type(2) {
+    background: url("https://footballwhispers.com/wp-content/uploads/2023/04/Icon_71425828-scaled.jpg") 
+      no-repeat 50% / cover;
+}
+
+.containero > div:nth-of-type(3) {
+    background: url("https://footballwhispers.com/wp-content/uploads/2023/04/Icon_230418-99-356400_dpai-scaled.jpg") 
+      no-repeat 50% / cover;
+}
+
+.containero > div:nth-of-type(4) {
+    background: url("https://footballwhispers.com/wp-content/uploads/2023/04/Icon_ecommerceFotos-eCommerce2-1232889881-scaled.jpg") 
+      no-repeat 50% / cover;
+}
+
+.contenti {
+    font-size: 1.5rem;
+    color: #000000; /* Cambiar a negro para mayor visibilidad */
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(4, 106, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.676) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+.contenti span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.containero div:hover .contenti {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+}
+
+.containero div:hover {
+    flex: 0 0 250px;
+    box-shadow: 1px 3px 15px #2a9101;
+    transform: translateY(-30px);
+}
+/*formulario*/
+.form-container {
+    background-color: rgb(1, 92, 22);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.submit-button {
+    background-color: #4CAF50;
+    color: rgb(0, 116, 4);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+.submit-button:hover {
+    background-color: #45a049;
+}

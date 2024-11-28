@@ -1,0 +1,360 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.hero {
+  background: url("https://th.bing.com/th/id/R.be1329365a9fe9f1fff54875852fd1df?rik=SsRjoOOzCzuHFw&riu=http%3a%2f%2fstatic1.squarespace.com%2fstatic%2f5d77a7f8ad30356d21445262%2f5d77ab1ed377dd7a3df216ea%2f5e3385d630336948c683da4a%2f1581949114328%2fCerro_Wahari-o-cara-de-indio-Amazonas.jpg%3fformat%3d1500w&ehk=8%2bTp0Cb3szxToVQ5HA2NsqQ2c16gRyAoPD8YbzUUWLY%3d&risl=&pid=ImgRaw&r=0")
+    no-repeat center center/cover;
+  color: rgb(1, 157, 30);
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+h3,
+h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.hero .btn {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.hero .btn:hover {
+  background: #218838;
+}
+
+.navbar {
+  background: #00601d;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Estilos generales para la barra de navegación */
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+  padding: 10px 15px; /* Espaciado dentro de los enlaces */
+  display: inline-block; /* Asegura que el padding se aplique correctamente */
+}
+
+/* Cambio de color al pasar el cursor */
+.navbar ul li a:hover {
+  color: #28a745; /* Cambia este color según la paleta que prefieras */
+  background-color: #ffffff; /* Fondo al pasar el cursor */
+  border-radius: 5px; /* Bordes redondeados opcionales */
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+  background-color: #333;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a la línea */
+}
+
+.grid article {
+  flex: 1 1 calc(30% - 20px); /* Controla el tamaño de cada tarjeta */
+  margin: 10px;
+  background: #f4f4f4;
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+}
+
+.grid article img {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 200px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra sin distorsión */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+}
+
+.grid article h3 {
+  margin: 15px 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.grid article p {
+  padding: 0 15px 20px;
+  flex-grow: 1; /* Extiende el contenido */
+  text-align: center;
+}
+
+.footer {
+  background: #00601d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.contacto {
+  background: #002108;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*lugares*/
+.header-lugares {
+  position: relative;
+  background: url("https://th.bing.com/th/id/OIP.C1QeyOcVkP9KqFie2-BtNwHaEK?rs=1&pid=ImgDetMain")
+    no-repeat center center/cover;
+  color: rgb(1, 157, 30);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.header-lugares::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Capa clara */
+  z-index: 1;
+}
+
+.header-lugares h1,
+.header-lugares p {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté encima de la capa */
+}
+
+.lugares {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.lugar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  text-align: center;
+}
+
+.lugar img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.lugar h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.lugar p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+/*Gastronomia*/
+.header-gastronomia {
+  position: relative;
+  background: url("https://delamazonas.com/wp-content/uploads/2020/06/platos-tipicos-low.jpg")
+    no-repeat center center/cover;
+  color: rgb(1, 157, 30);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.header-gastronomia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Capa clara */
+  z-index: 1;
+}
+
+.header-gastronomia h1,
+.header-gastronomia p {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté encima de la capa */
+}
+
+.section.gastronomia {
+  display: grid; /* Usar grid para un control más preciso */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Columnas flexibles */
+  gap: 20px; /* Espaciado uniforme entre tarjetas */
+
+  margin: 0 auto; /* Centra la sección */
+}
+
+.plato {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden; /* Evita desbordamiento */
+}
+
+.plato img {
+  width: 500px;
+  height: 300px;
+}
+
+.plato h2 {
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.plato p {
+  color: #666;
+  padding: 0 15px 20px;
+  line-height: 1.5;
+}
+
+/* Estilo para el título de bebidas */
+.bebidas-titulo {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Contenedor de la lista de bebidas */
+
+.bebidas li {
+  background: #e0f7fa;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #004d40;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bebidas li:hover {
+  transform: scale(1.05); /* Efecto al pasar el cursor */
+}
+
+/*CULTURAS*/
+
+.header-culturas {
+  position: relative;
+  background: url("https://delamazonas.com/wp-content/uploads/2020/06/cultura-del-amazonas-low.jpg")
+    no-repeat center center/cover;
+  color: rgb(1, 157, 30);
+  text-align: center;
+  padding: 100px 20px;
+}
+.header-culturas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Capa clara */
+  z-index: 1;
+}
+.header-culturas h1,
+.header-culturas p {
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté encima de la capa */
+}
+.section.culturas {
+  padding: 50px;
+  text-align: center;
+}
+
+.cultura {
+  margin-bottom: 40px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cultura h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.cultura p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.5;
+}

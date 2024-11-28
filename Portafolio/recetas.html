@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetas de Patacón Venezolano</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/recetas.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Patacón Venezolano</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="portafolio.html">portafolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#recetas">Recetas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-dark text-white text-center py-5">
+      <h1 class="display-3">¡Descubre las Mejores Recetas de Patacón!</h1>
+      <p class="lead">
+        Disfruta del sabor único de uno de los platos más deliciosos de
+        Venezuela.
+      </p>
+    </header>
+
+    <!-- Recetas Section -->
+    <section id="recetas" class="container my-5">
+      <h2 class="text-center mb-4">Recetas Populares</h2>
+      <div class="row" id="recipe-cards">
+        <!-- Las tarjetas de recetas serán agregadas dinámicamente con JS -->
+      </div>
+    </section>
+
+    <!-- Modal for Recipe Details -->
+    <div
+      class="modal fade"
+      id="recipeModal"
+      tabindex="-1"
+      aria-labelledby="recipeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="recipeModalLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="recipe-description"></p>
+            <ul id="recipe-ingredients" class="list-unstyled">
+              <!-- Los ingredientes se agregarán dinámicamente aquí -->
+            </ul>
+            <img id="recipe-image" class="img-fluid" src="" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="bg-light py-5">
+      <div class="container text-center">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna duda o sugerencia? ¡Contáctanos!</p>
+        <a href="mailto:contacto@pataconvenezolano.com" class="btn btn-primary"
+          >Enviar correo</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 Patacón Venezolano. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const recipes = [
+        {
+          title: "Patacón con Carne Mechada",
+          description:
+            "Un delicioso patacón acompañado de carne mechada jugosa y sabrosa.",
+          image:
+            "https://th.bing.com/th/id/OIP.DHlQnIto8WcoUv3-CCYjEAHaFj?rs=1&pid=ImgDetMain",
+          ingredients: [
+            "1 kg de carne de res",
+            "4 plátanos maduros",
+            "1 cebolla",
+            "Ajo al gusto",
+            "Sal y pimienta al gusto",
+          ],
+        },
+        {
+          title: "Patacón con Pollo Frito",
+          description:
+            "Crispy pollo frito sobre un patacón crocante, ¡el perfecto balance de texturas!",
+          image: "https://i.ytimg.com/vi/Xzbvdz7epDo/maxresdefault.jpg",
+          ingredients: [
+            "4 muslos de pollo",
+            "2 plátanos",
+            "Harina de trigo",
+            "Especias al gusto",
+            "Aceite para freír",
+          ],
+        },
+        {
+          title: "Patacón con Queso y Aguacate",
+          description:
+            "Una opción vegetariana con queso derretido y aguacate fresco sobre patacón.",
+          image:
+            "https://th.bing.com/th/id/OIP.wjBE4lCZYNxHJtpNfgPMngHaE8?rs=1&pid=ImgDetMain",
+          ingredients: [
+            "2 plátanos maduros",
+            "200 g de queso rallado",
+            "1 aguacate",
+            "Aceite para freír",
+            "Sal al gusto",
+          ],
+        },
+      ];
+
+      // Cargar las recetas dinámicamente
+      function loadRecipes() {
+        const recipeContainer = document.getElementById("recipe-cards");
+        recipes.forEach((recipe, index) => {
+          const recipeCard = `
+            <div class="col-md-4">
+              <div class="card">
+                <img src="${recipe.image}" class="card-img-top" alt="${recipe.title}" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">${recipe.title}</h5>
+                  <p class="card-text">${recipe.description}</p>
+                  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#recipeModal" onclick="showRecipeDetails(${index})">Ver receta</button>
+                </div>
+              </div>
+            </div>
+          `;
+          recipeContainer.innerHTML += recipeCard;
+        });
+      }
+
+      // Función para mostrar los detalles de la receta en el modal
+      function showRecipeDetails(index) {
+        const recipe = recipes[index];
+        document.getElementById("recipeModalLabel").textContent = recipe.title;
+        document.getElementById("recipe-description").textContent =
+          recipe.description;
+        document.getElementById("recipe-image").src = recipe.image;
+
+        // Agregar los ingredientes al modal
+        const ingredientsList = document.getElementById("recipe-ingredients");
+        ingredientsList.innerHTML = ""; // Limpiar la lista de ingredientes
+        recipe.ingredients.forEach((ingredient) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = ingredient;
+          ingredientsList.appendChild(listItem);
+        });
+      }
+
+      // Llamar a la función para cargar las recetas
+      window.onload = loadRecipes;
+    </script>
+  </body>
+</html>
